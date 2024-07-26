@@ -1,0 +1,114 @@
+.product-card2 {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px; /* Reduced padding */
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 750px; /* Slightly reduced width */
+    max-width: 100%;
+    margin: 10px auto; /* Reduced margin */
+    position: relative;
+}
+
+.product-card2 img {
+    width: 240px; /* Increased width of the image */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    max-height: 120px; /* Slightly decreased height */
+    border-radius: 4px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.product-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    position: relative; /* Positioning context for power controls */
+}
+
+.power-controls-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center power controls vertically */
+    align-items: flex-end; /* Align power controls to the right */
+    gap: 10px; /* Reduced gap between power control sets */
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.power-control {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduced gap between label and buttons */
+}
+
+.power-control span {
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+    margin-right: 8px; /* Adjusted spacing */
+}
+
+.power-control button {
+    width: 28px; /* Reduced button size */
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Reduced font size */
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+}
+
+.power-control button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.power-control button::before {
+    content: '';
+}
+
+.power-control button.increment::before {
+    content: '+'; /* Plus symbol */
+}
+
+.power-control button.decrement::before {
+    content: '−'; /* Minus symbol */
+}
+
+.remove-button {
+    position: absolute;
+    top: 5px; /* Adjusted position */
+    right: 5px; /* Adjusted position */
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px; /* Reduced font size */
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.remove-button:hover {
+    color: darkred;
+}
+
+.total-price {
+    text-align: right;
+    margin-top: 20px;
+    position: absolute;
+    right: 10px; /* Adjusted position */
+    bottom: 10px; /* Adjusted position */
+}
+
+.total-price h3 {
+    color: #333;
+    font-weight: bold;
+}
